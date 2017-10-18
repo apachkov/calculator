@@ -33,16 +33,16 @@ function calculate(firstNumber, secondNumber, action) {
     
   	switch(action)
   	{
-	case "+": 
+	case '+', 'add': 
 	  result = firstNumber + secondNumber;
 	  break;
-	case '-': 
+	case '-', 'minus': 
 	  result = firstNumber - secondNumber;
 	  break;
-	case '*': 
+	case '*', 'multiply': 
 	  result = firstNumber * secondNumber;
 	  break;
-	case '/': 
+	case '/', 'divide': 
 	  result = firstNumber / secondNumber;
 	  break;
 	default: 
