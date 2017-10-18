@@ -33,17 +33,25 @@ function calculate(firstNumber, secondNumber, action) {
     
   	switch(action)
   	{
-	case '+', 'add': 
+	case '+':
+	case 'add':
 	  result = firstNumber + secondNumber;
 	  break;
-	case '-', 'minus': 
+	case '-':
+	case 'minus':
 	  result = firstNumber - secondNumber;
 	  break;
-	case '*', 'multiply': 
+	case '*':
+	case 'multiply':
 	  result = firstNumber * secondNumber;
 	  break;
-	case '/', 'divide': 
+	case '/':
+	case 'divide':
 	  result = firstNumber / secondNumber;
+	  break;
+	case '^':
+	case 'elevate':
+	  result = firstNumber ^ secondNumber;
 	  break;
 	default: 
 	  result = 'ERROR: Operating is not correct!';
