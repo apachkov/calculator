@@ -14,6 +14,7 @@ function initCalculator() {
     second = document.getElementById('second-number'),
     action = document.getElementById('action');
 
+
   calculator.onsubmit = function(event) {
     var
       firstNumber = parseFloat(first.value),
@@ -23,8 +24,11 @@ function initCalculator() {
 
     event.preventDefault();
 
-    resultRender(firstNumber, secondNumber, actionType, result);
-    this.reset();
+    if ((result !== undefined) && (!isNaN(result))  ) {
+      console.log('hello');
+      resultRender(firstNumber, secondNumber, actionType, result);
+      this.reset();
+    }
   }
 }
 
