@@ -31,17 +31,30 @@ function initCalculator() {
 function calculate(firstNumber, secondNumber, action) {
   var result;
 
-  if (action === '+') {
-    result = firstNumber + secondNumber;
-  } else if (action === '-') {
-    result = firstNumber - secondNumber;
-  } else if (action === '*') {
-    result = firstNumber * secondNumber;
-  } else if (action === '/') {
-    result = firstNumber / secondNumber;
-  }
+    switch(action){
+      case '+':
+        return result = firstNumber + secondNumber;
+        break;
+    } 
 
-  return result;
+    switch(action){
+      case '-':
+        return result = firstNumber - secondNumber;
+        break;
+    }  
+
+    switch(action){
+      case '*':
+        return result = firstNumber * secondNumber;
+        break;
+    }  
+
+    switch(action){
+      case '/':
+        return result = firstNumber / secondNumber;
+        break;
+    }   
+
 }
 
 function resultRender(firstNumber, secondNumber, action, result) {
