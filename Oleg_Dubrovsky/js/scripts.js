@@ -20,11 +20,15 @@ function initCalculator() {
       secondNumber = parseFloat(second.value),
       actionType = action.value.trim(),
       result = calculate(firstNumber, secondNumber, actionType);
-
     event.preventDefault();
 
-    resultRender(firstNumber, secondNumber, actionType, result);
-    this.reset();
+      if(result===undefined||result===NaN){
+        return;
+      }
+      else{
+        resultRender(firstNumber, secondNumber, actionType, result);
+        this.reset();
+    }
   }
 }
 
