@@ -51,6 +51,10 @@ function calculate(firstNumber, secondNumber, action) {
     case ('divide'):
       result = firstNumber / secondNumber;
       break;
+    case ('^'):
+    case ('exponentiation'):
+      result = Math.pow(firstNumber, secondNumber);
+      break;
   }
 
 
