@@ -33,24 +33,28 @@ function calculate(firstNumber, secondNumber, action) {
 
     switch(action){
       case '+':
+      case 'add':
         return result = firstNumber + secondNumber;
         break;
     } 
 
     switch(action){
       case '-':
+      case 'minus':
         return result = firstNumber - secondNumber;
         break;
     }  
 
     switch(action){
       case '*':
+      case 'multiply':
         return result = firstNumber * secondNumber;
         break;
     }  
 
     switch(action){
       case '/':
+      case 'division':
         return result = firstNumber / secondNumber;
         break;
     }   
