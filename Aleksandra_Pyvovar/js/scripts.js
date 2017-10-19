@@ -41,10 +41,10 @@ function calculate(firstNumber, secondNumber, action) {
     case '*': result = firstNumber * secondNumber; break;
     case '/': result = firstNumber / secondNumber; break;
     case '^': result = Math.pow(firstNumber, secondNumber); break;
-    case 'addition': result = firstNumber + secondNumber; break;
+    case 'add': result = firstNumber + secondNumber; break;
     case 'minus': result = firstNumber - secondNumber; break;
-    case 'multiplication': result = firstNumber * secondNumber; break;
-    case 'division': result = firstNumber / secondNumber; break;
+    case 'multiply': result = firstNumber * secondNumber; break;
+    case 'divide': result = firstNumber / secondNumber; break;
     case 'elevate': result = Math.pow(firstNumber, secondNumber); break;
   }
 
