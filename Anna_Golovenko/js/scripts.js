@@ -28,27 +28,25 @@ function initCalculator() {
   }
 }
 
-/* Задание 1:
-Перепишите блок if...else в функции calculate (файл js/scripts.js) на switch...case.
-После выполнения задания сделайте коммит.*/
 
 function calculate(firstNumber, secondNumber, action) {
   var result;
 
-  switch (result) {
-  	case (action === '+'):
-    	result = firstNumber + secondNumber;
-    	break;
-   	case (action === '-'):
-    	result = firstNumber - secondNumber;
-   		break;
-   	case (action === '*'):
-    	result = firstNumber * secondNumber;
-    	break; 
-    case (action === ''):
-    	result = firstNumber / secondNumber;
-    	break;
+   switch (action) {
+    case ('+'):
+      result = firstNumber + secondNumber;
+      break;
+    case ('-'):
+      result = firstNumber - secondNumber;
+      break;
+    case ('*'):
+      result = firstNumber * secondNumber;
+      break; 
+    case ('/'):
+      result = firstNumber / secondNumber;
+      break;
   }
+
 
   return result;
 }
