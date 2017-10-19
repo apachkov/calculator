@@ -57,7 +57,14 @@ function calculate(firstNumber, secondNumber, action) {
       case 'division':
         return result = firstNumber / secondNumber;
         break;
-    }   
+    }  
+
+    switch(action){
+      case '^':
+      case 'elevate':
+        return result = Math.pow(firstNumber,secondNumber);
+        break;
+    }    
 
 }
 
