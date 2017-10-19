@@ -36,8 +36,12 @@ function calculate(firstNumber, secondNumber, action) {
     case '-': result = firstNumber - secondNumber; break;
     case '*': result = firstNumber * secondNumber; break;
     case '/': result = firstNumber / secondNumber; break;
+    case 'addition': result = firstNumber + secondNumber; break;
+    case 'minus': result = firstNumber - secondNumber; break;
+    case 'multiplication': result = firstNumber * secondNumber; break;
+    case 'division': result = firstNumber / secondNumber; break;
   }
-  
+
   return result;
 }
 
