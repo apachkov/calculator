@@ -31,13 +31,13 @@ function initCalculator() {
 function calculate(firstNumber, secondNumber, action) {
   var result;
 
-  switch (action === '+') {
+  switch (action === '+' || 'add' ) {
     result = firstNumber + secondNumber;
-  } case (action === '-') {
+  } case (action === '-' || 'minus') {
     result = firstNumber - secondNumber;
-  } case (action === '*') {
+  } case (action === '*' || 'multiply') {
     result = firstNumber * secondNumber;
-  } case (action === '/') {
+  } case (action === '/' || 'divide') {
     result = firstNumber / secondNumber;
   }
 
