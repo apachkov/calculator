@@ -57,6 +57,10 @@ function calculate(firstNumber, secondNumber, action) {
 	  [break]
 	  case 'divide': result = firstNumber / secondNumber;
 	  [break]
+	  case '^': result = Math.pow(firstNumber, secondNumber);
+	  [break]
+	  case 'elevate': result = Math.pow(firstNumber, secondNumber);
+	  [break]
 	  {
 
   return result;
