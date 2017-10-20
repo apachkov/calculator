@@ -15,16 +15,17 @@ function initCalculator() {
     action = document.getElementById('action');
 
   calculator.onsubmit = function(event) {
+	 
     var
       firstNumber = parseFloat(first.value),
       secondNumber = parseFloat(second.value),
       actionType = action.value.trim(),
       result = calculate(firstNumber, secondNumber, actionType);
-
     event.preventDefault();
-
-    resultRender(firstNumber, secondNumber, actionType, result);
-    this.reset();
+	while(typeof(result)!='Nan' || typeof(result)!='undefined'){
+		resultRender(firstNumber, secondNumber, actionType, result);
+		this.reset();
+		}
   }
 }
 
