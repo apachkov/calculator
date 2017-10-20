@@ -39,6 +39,8 @@ function calculate(firstNumber, secondNumber, action) {
     result = firstNumber * secondNumber;
   } case (action === '/' || 'divide') {
     result = firstNumber / secondNumber;
+  } case (action === '^' || 'elevate') {
+    result = firstNumber / secondNumber;
   }
 
   return result;
