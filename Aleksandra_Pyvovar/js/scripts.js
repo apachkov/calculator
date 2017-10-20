@@ -24,11 +24,11 @@ function initCalculator() {
 
     event.preventDefault();
 
-    if ((result !== undefined) && (!isNaN(result))  ) {
-      console.log('hello');
-      resultRender(firstNumber, secondNumber, actionType, result);
-      this.reset();
-    }
+    if (result === undefined || isNaN(result)) return;
+
+    resultRender(firstNumber, secondNumber, actionType, result);
+    this.reset();
+
   }
 }
 
@@ -36,15 +36,15 @@ function calculate(firstNumber, secondNumber, action) {
   var result;
 
   switch(action) {
-    case '+': result = firstNumber + secondNumber; break;
-    case '-': result = firstNumber - secondNumber; break;
-    case '*': result = firstNumber * secondNumber; break;
-    case '/': result = firstNumber / secondNumber; break;
-    case '^': result = Math.pow(firstNumber, secondNumber); break;
+    case '+':
     case 'add': result = firstNumber + secondNumber; break;
+    case '-':
     case 'minus': result = firstNumber - secondNumber; break;
+    case '*':
     case 'multiply': result = firstNumber * secondNumber; break;
+    case '/':
     case 'divide': result = firstNumber / secondNumber; break;
+    case '^':
     case 'elevate': result = Math.pow(firstNumber, secondNumber); break;
   }
 
