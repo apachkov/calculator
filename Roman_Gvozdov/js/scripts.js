@@ -49,6 +49,14 @@ function calculate(firstNumber, secondNumber, action) {
 	  [break]
 	  case '/': result = firstNumber / secondNumber;
 	  [break]
+	  case 'add': result = firstNumber + secondNumber;
+	  [break]
+	  case 'minus': result = firstNumber - secondNumber;
+	  [break]
+	  case 'multiply': result = firstNumber * secondNumber;
+	  [break]
+	  case 'divide': result = firstNumber / secondNumber;
+	  [break]
 	  {
 
   return result;
