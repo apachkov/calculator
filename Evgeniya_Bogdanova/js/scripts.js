@@ -21,7 +21,9 @@ function initCalculator() {
       actionType = action.value.trim(),
       result = calculate(firstNumber, secondNumber, actionType);
 
-    event.preventDefault();
+    event.preventDefault(); 
+    
+    if (isNaN(result) || result === undefined) return;
 
     resultRender(firstNumber, secondNumber, actionType, result);
     this.reset();
@@ -29,36 +31,36 @@ function initCalculator() {
 }
 
 function calculate(firstNumber, secondNumber, action) {
-  var result; 
+  var result;
     
   	switch(action)
   	{
-	case '+':
-	case 'add':
-	  result = firstNumber + secondNumber;
-	  break;
-	case '-':
-	case 'minus':
-	  result = firstNumber - secondNumber;
-	  break;
-	case '*':
-	case 'multiply':
-	  result = firstNumber * secondNumber;
-	  break;
-	case '/':
-	case 'divide':
-	  result = firstNumber / secondNumber;
-	  break;
-	case '^':
-	case 'elevate':
-	  result = firstNumber ^ secondNumber;
-	  break;
-	default: 
-	  result = 'ERROR: Operating is not correct!';
-      break;
+		case '+':
+		case 'add':
+		  result = firstNumber + secondNumber;
+		  break;
+		case '-':
+		case 'minus':
+		  result = firstNumber - secondNumber;
+		  break;
+		case '*':
+		case 'multiply':
+		  result = firstNumber * secondNumber;
+		  break;
+		case '/':
+		case 'divide':
+		  result = firstNumber / secondNumber;
+		  break;
+		case '^':
+		case 'elevate':
+		  result = firstNumber ^ secondNumber;
+		  break;
+		default: 
+		  result = 'ERROR: Operating is not correct!';
+		  break;
 	}
-
-  return result;
+	
+	return result;
 } 
 
 function resultRender(firstNumber, secondNumber, action, result) {
