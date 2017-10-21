@@ -22,10 +22,12 @@ function initCalculator() {
       actionType = action.value.trim(),
       result = calculate(firstNumber, secondNumber, actionType);
     event.preventDefault();
-	while(typeof(result)!='Nan' || typeof(result)!='undefined'){
+		if(typeof(result)!=='Nan' || typeof(result)!=='undefined'){
+			return;
+		}
 		resultRender(firstNumber, secondNumber, actionType, result);
 		this.reset();
-		}
+		
   }
 }
 
@@ -43,26 +45,26 @@ function calculate(firstNumber, secondNumber, action) {
   }*/
   switch(action){
 	  case '+': result = firstNumber + secondNumber;
-	  [break]
+	  break;
 	  case '-': result = firstNumber - secondNumber;
-	  [break]
+	  break;
 	  case '*': result = firstNumber * secondNumber;
-	  [break]
+	  break;
 	  case '/': result = firstNumber / secondNumber;
-	  [break]
+	  break;
 	  case 'add': result = firstNumber + secondNumber;
-	  [break]
+	  break;
 	  case 'minus': result = firstNumber - secondNumber;
-	  [break]
+	  break;
 	  case 'multiply': result = firstNumber * secondNumber;
-	  [break]
+	  break;
 	  case 'divide': result = firstNumber / secondNumber;
-	  [break]
+	  break;
 	  case '^': result = Math.pow(firstNumber, secondNumber);
-	  [break]
+	  break;
 	  case 'elevate': result = Math.pow(firstNumber, secondNumber);
-	  [break]
-	  {
+	  break;
+  }
 
   return result;
 }
