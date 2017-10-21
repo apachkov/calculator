@@ -22,13 +22,9 @@ function initCalculator() {
       result = calculate(firstNumber, secondNumber, actionType);
     event.preventDefault();
 
-      if(result===undefined||result===NaN){
-        return;
-      }
-      else{
+      if (result === undefined || isNaN(result)) return;
         resultRender(firstNumber, secondNumber, actionType, result);
         this.reset();
-    }
   }
 }
 
@@ -37,39 +33,22 @@ function calculate(firstNumber, secondNumber, action) {
 
     switch(action){
       case '+':
-      case 'add':
-        return result = firstNumber + secondNumber;
-        break;
-    } 
-
-    switch(action){
+      case 'add': return result = firstNumber + secondNumber; break;
+    
       case '-':
-      case 'minus':
-        return result = firstNumber - secondNumber;
-        break;
-    }  
-
-    switch(action){
+      case 'minus': return result = firstNumber - secondNumber; break;
+     
       case '*':
-      case 'multiply':
-        return result = firstNumber * secondNumber;
-        break;
-    }  
-
-    switch(action){
+      case 'multiply': return result = firstNumber * secondNumber; break;
+    
       case '/':
-      case 'division':
-        return result = firstNumber / secondNumber;
-        break;
-    }  
-
-    switch(action){
+      case 'division': return result = firstNumber / secondNumber; break;
+    
       case '^':
-      case 'elevate':
-        return result = Math.pow(firstNumber,secondNumber);
-        break;
+      case 'elevate': return result = Math.pow(firstNumber,secondNumber); break;
     }    
 
+    return result;
 }
 
 function resultRender(firstNumber, secondNumber, action, result) {
