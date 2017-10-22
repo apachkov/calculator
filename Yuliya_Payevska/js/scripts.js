@@ -22,9 +22,11 @@ function initCalculator() {
       result = calculate(firstNumber, secondNumber, actionType);
       
     event.preventDefault();
-    result.resultRender()
 
-    resultRender(firstNumber, secondNumber, actionType, result);
+    if (result) {
+      resultRender(firstNumber, secondNumber, actionType, result);
+    }
+    
     this.reset();
   }
 }
@@ -32,18 +34,28 @@ function initCalculator() {
 function calculate(firstNumber, secondNumber, action) {
   var result;
 
-  switch (action === '+' || 'add' ) {
+  switch (action) { 
+    case '+':
+    case 'plus':
     result = firstNumber + secondNumber;
-  } case (action === '-' || 'minus') {
+    break;
+    case '-':
+    case 'minus':
     result = firstNumber - secondNumber;
-  } case (action === '*' || 'multiply') {
+    break;
+    case '*':
+    case  'multiply':
     result = firstNumber * secondNumber;
-  } case (action === '/' || 'divide') {
+    break;
+    case '/':
+    case 'divide':
     result = firstNumber / secondNumber;
-  } case (action === '^' || 'elevate') {
-    result = firstNumber / secondNumber;
-  }
-
+    break;
+    case '^':
+    case 'elevate':
+    result = Math.pow(firstNumber, secondNumber);
+    break;
+} 
   return result;
 }
 
