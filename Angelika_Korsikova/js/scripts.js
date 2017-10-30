@@ -30,7 +30,6 @@ function initCalculator() {
 
 function calculate(firstNumber, secondNumber, action) {
   var result;
-  
   switch (action) {
     case: '+'
     case: 'add'
@@ -50,6 +49,11 @@ function calculate(firstNumber, secondNumber, action) {
     case: 'devide' 
       result = firstNumber / secondNumber;
       break;
+    case: '^'      
+    case: 'exponentiation' 
+      result = Math.pow(firstNumber, secondNumber)
+      break;
+
 
   return result;
 }
