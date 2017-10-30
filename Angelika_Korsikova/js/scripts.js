@@ -22,9 +22,6 @@ function initCalculator() {
       result = calculate(firstNumber, secondNumber, actionType);
 
     event.preventDefault();
-    if (isNaN(result) || (result === underfined)){
-    return;
-  }
 
     resultRender(firstNumber, secondNumber, actionType, result);
     this.reset();
@@ -36,28 +33,17 @@ function calculate(firstNumber, secondNumber, action) {
 
   switch (action) {
     case: '+'
-    case: 'add'
-    case: 'plus'
       result = firstNumber + secondNumber;
       break;
     case: '-'
-    case: 'deduct'
-    case: 'minus' 
       result = firstNumber - secondNumber;
       break;
     case: '*'
-    case: 'multiply' 
       result = firstNumber * secondNumber;
       break;
     case: '/'
-    case: 'devide' 
       result = firstNumber / secondNumber;
       break;
-    case: '^'      
-    case: 'exponentiation' 
-      result = Math.pow(firstNumber, secondNumber)
-      break;
-
 
   return result;
 }
