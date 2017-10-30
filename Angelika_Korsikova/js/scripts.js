@@ -30,18 +30,24 @@ function initCalculator() {
 
 function calculate(firstNumber, secondNumber, action) {
   var result;
-
+  
   switch (action) {
     case: '+'
+    case: 'add'
+    case: 'plus'
       result = firstNumber + secondNumber;
       break;
     case: '-'
+    case: 'deduct'
+    case: 'minus' 
       result = firstNumber - secondNumber;
       break;
     case: '*'
+    case: 'multiply' 
       result = firstNumber * secondNumber;
       break;
     case: '/'
+    case: 'devide' 
       result = firstNumber / secondNumber;
       break;
 
