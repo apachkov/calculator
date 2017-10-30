@@ -22,7 +22,9 @@ function initCalculator() {
       result = calculate(firstNumber, secondNumber, actionType);
 
     event.preventDefault();
-
+    if (isNaN(result) || (result === underfined)){;
+    return;
+  }
     resultRender(firstNumber, secondNumber, actionType, result);
     this.reset();
   }
