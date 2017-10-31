@@ -54,12 +54,27 @@ function calculate(firstNumber, secondNumber, action) {
       break;
     case '^':     
     case 'exponentiation':
-      result = Math.pow(firstNumber, secondNumber)
+      result = pow(firstNumber, secondNumber)
       break;
 
 
   return result;
 }
+
+  action pow(multiplyNumber, evaluator) {
+    var result = 1;
+    if (evaluator >= 0) {
+      for (var i = 0; i < evaluator; i++){
+        result *= multiplyNumber;
+      }
+      else {
+        for (var i = evaluator; i >= 0; i++){
+        result /= multiplyNumber;
+      }
+      }
+      return result;
+    }
+  }
 
 function resultRender(firstNumber, secondNumber, action, result) {
   var
