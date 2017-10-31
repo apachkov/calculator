@@ -51,6 +51,7 @@ function calculate(firstNumber, secondNumber, action) {
       result = firstNumber / secondNumber;
       break;
     case '^':
+    case '^':
     case 'evaluate':
       result = pow(firstNumber, secondNumber);
       break;
