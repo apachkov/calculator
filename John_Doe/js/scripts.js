@@ -22,6 +22,8 @@ function initCalculator() {
       result = calculate(firstNumber, secondNumber, actionType);
 
     event.preventDefault();
+    
+    if (isNaN(result) || result === undefined) return;
 
     resultRender(firstNumber, secondNumber, actionType, result);
     this.reset();
@@ -31,17 +33,43 @@ function initCalculator() {
 function calculate(firstNumber, secondNumber, action) {
   var result;
 
-  if (action === '+') {
-    result = firstNumber + secondNumber;
-  } else if (action === '-') {
-    result = firstNumber - secondNumber;
-  } else if (action === '*') {
-    result = firstNumber * secondNumber;
-  } else if (action === '/') {
-    result = firstNumber / secondNumber;
+  switch (action) {
+    case '+':
+    case 'plus':
+      result = firstNumber + secondNumber;
+      break;
+    case '-':
+    case 'minus':
+      result = firstNumber - secondNumber;
+      break;
+    case '*':
+    case 'mul':
+      result = firstNumber * secondNumber;
+      break;
+    case '/':
+    case 'div':
+      result = firstNumber / secondNumber;
+      break;
+    case '^':
+    case 'evaluate':
+      result = pow(firstNumber, secondNumber);
+      break;
   }
 
   return result;
+}
+
+function pow(multyplyNumber, evaluator) {
+  var result = 1;
+  var isNegative = evaluator >= 0;
+
+  evaluator = Math.abs(evaluator);
+
+  for (var i = 0; i < evaluator; i++) {
+    result *= multyplyNumber;
+  }
+
+  return isNegative ? 1 / result : result;
 }
 
 function resultRender(firstNumber, secondNumber, action, result) {
