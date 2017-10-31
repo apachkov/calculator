@@ -23,6 +23,10 @@ function initCalculator() {
 
     event.preventDefault();
 
+if (isNaN(result) || (result === undefined)) {
+      return;
+    }
+    
     resultRender(firstNumber, secondNumber, actionType, result);
     this.reset();
   }
