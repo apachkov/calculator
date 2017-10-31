@@ -45,11 +45,25 @@ function calculate(firstNumber, secondNumber, action) {
       case 'division': return result = firstNumber / secondNumber; break;
     
       case '^':
-      case 'elevate': return result = Math.pow(firstNumber,secondNumber); break;
+      case 'elevate': return result = pow(firstNumber,secondNumber); break;
     }    
 
     return result;
 }
+
+function pow(number, evaluator){
+  var result=1;
+  if(evaluator >=0) {
+    for(var i = 0; i<evaluator; i++){
+      result *=number;
+      }
+    }else {
+      for (var i = evaluator; i >= 0; i++) {
+        result /= number;
+      }
+    }
+    return result;
+  }
 
 function resultRender(firstNumber, secondNumber, action, result) {
   var
