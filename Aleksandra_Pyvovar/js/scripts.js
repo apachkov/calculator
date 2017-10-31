@@ -45,10 +45,23 @@ function calculate(firstNumber, secondNumber, action) {
     case '/':
     case 'divide': result = firstNumber / secondNumber; break;
     case '^':
-    case 'elevate': result = Math.pow(firstNumber, secondNumber); break;
+    case 'elevate': result = pow(firstNumber, secondNumber); break;
   }
 
   return result;
+}
+
+function pow (multiplyNumber, evaluator) {
+  var result = 1;
+  var isNegative = evaluator < 0;
+
+  evaluator = Math.abs(evaluator);
+
+  for (var i = 0; i < evaluator; i++) {
+    result *= multiplyNumber; 
+  }
+
+    return isNegative ? 1 / result : result;
 }
 
 function resultRender(firstNumber, secondNumber, action, result) {
