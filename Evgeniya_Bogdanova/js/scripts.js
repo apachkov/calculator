@@ -30,6 +30,21 @@ function initCalculator() {
   }
 }
 
+function pow(multyplyNumber, evaluator) {
+	var result = 1;
+
+	if (evaluator >=0) {
+		for (var i = 0; i < evaluator; i++) {
+			result *= multyplyNumber;
+		}  
+	} else {
+		for (var i = evaluator; i < 0 ; i++) {
+			result /= multyplyNumber;
+		}  
+	}
+	return result;
+}
+
 function calculate(firstNumber, secondNumber, action) {
   var result;
     
@@ -53,7 +68,7 @@ function calculate(firstNumber, secondNumber, action) {
 		  break;
 		case '^':
 		case 'elevate':
-		  result = firstNumber ^ secondNumber;
+		  result = pow(firstNumber, secondNumber);
 		  break;
 		default: 
 		  result = 'ERROR: Operating is not correct!';
