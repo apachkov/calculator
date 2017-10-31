@@ -1,5 +1,5 @@
 /**
- * Created by John Doe on 17.10.2017.
+ * Created by Angelika Korsikova on 31.10.2017.
  */
 document.onreadystatechange = function () {
   if (document.readyState === 'interactive') {
@@ -22,7 +22,7 @@ function initCalculator() {
       result = calculate(firstNumber, secondNumber, actionType);
 
     event.preventDefault();
-    if (isNaN(result) || (result === underfined)){;
+    if (isNaN(result) || (result === undefined)){
     return;
   }
     resultRender(firstNumber, secondNumber, actionType, result);
@@ -32,27 +32,28 @@ function initCalculator() {
 
 function calculate(firstNumber, secondNumber, action) {
   var result;
+
   switch (action) {
-    case: '+'
-    case: 'add'
-    case: 'plus'
+    case '+':
+    case 'add':
+    case 'plus':
       result = firstNumber + secondNumber;
       break;
-    case: '-'
-    case: 'deduct'
-    case: 'minus' 
+    case '-':
+    case 'deduct':
+    case 'minus':
       result = firstNumber - secondNumber;
       break;
-    case: '*'
-    case: 'multiply' 
+    case '*':
+    case 'multiply': 
       result = firstNumber * secondNumber;
       break;
-    case: '/'
-    case: 'devide' 
+    case '/':
+    case 'devide': 
       result = firstNumber / secondNumber;
       break;
-    case: '^'      
-    case: 'exponentiation' 
+    case '^':     
+    case 'exponentiation':
       result = Math.pow(firstNumber, secondNumber)
       break;
 
