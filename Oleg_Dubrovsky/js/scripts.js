@@ -34,23 +34,28 @@ function calculate(firstNumber, secondNumber, action) {
     switch(action){
       case '+':
       case 'add': 
-      return result = firstNumber + secondNumber;
-    
+      result = firstNumber + secondNumber;
+      break;
+      
       case '-':
       case 'minus': 
-      return result = firstNumber - secondNumber;
-     
+      result = firstNumber - secondNumber;
+      break;
+
       case '*':
       case 'multiply': 
-      return result = firstNumber * secondNumber;
-    
+      result = firstNumber * secondNumber;
+      break;
+
       case '/':
       case 'division': 
-      return result = firstNumber / secondNumber;
-    
+      result = firstNumber / secondNumber;
+      break;
+
       case '^':
       case 'elevate': 
-      return result = pow(firstNumber,secondNumber);
+      result = pow(firstNumber,secondNumber);
+      break;
     }    
     return result;
 }
