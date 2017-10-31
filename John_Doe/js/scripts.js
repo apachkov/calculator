@@ -52,11 +52,24 @@ function calculate(firstNumber, secondNumber, action) {
       break;
     case '^':
     case 'evaluate':
-      result = Math.pow(firstNumber, secondNumber);
+      result = pow(firstNumber, secondNumber);
       break;
   }
 
   return result;
+}
+
+function pow(multyplyNumber, evaluator) {
+  var result = 1;
+  var isNegative = evaluator >= 0;
+
+  evaluator = Math.abs(evaluator);
+
+  for (var i = 0; i < evaluator; i++) {
+    result *= multyplyNumber;
+  }
+
+  return isNegative ? 1 / result : result;
 }
 
 function resultRender(firstNumber, secondNumber, action, result) {
