@@ -59,6 +59,21 @@ function calculate(firstNumber, secondNumber, action) {
   return result;
 }
 
+ function pow(multiplyNumber, evaluator) {
+  var result = 1;
+  var isNegative = evaluator >= 0;
+
+  elevate = Math.abs(evaluator);
+
+  
+    for (var i = 0; i < evaluator; i++) {
+    result = result * multiplyNumber; 
+  }    
+      return isNegative ? 1 / result : result;
+    
+  }
+ 
+
 function resultRender(firstNumber, secondNumber, action, result) {
   var
     results = document.getElementById('results'),
