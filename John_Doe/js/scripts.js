@@ -61,7 +61,7 @@ function calculate(firstNumber, secondNumber, action) {
 
 function pow(multyplyNumber, evaluator) {
   var result = 1;
-  var isNegative = evaluator >= 0;
+  var isNegative = evaluator < 0;
 
   evaluator = Math.abs(evaluator);
 
